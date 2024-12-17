@@ -1,0 +1,14 @@
+project: default
+syncPolicy:
+  syncOptions:
+    - CreateNamespace=true
+    - ApplyOutOfSyncOnly=true
+    - FailOnSharedResource=true
+labels:
+  owner: devops
+
+helm:
+  valueFilesRepoURL: "https://github.com/PierreBesson/argocd-gitops-env.git"
+  valueFilesRepoTargetRevision: HEAD
+  chartReleasesByNamespace: {}
+  pathReleasesByNamespace: {}
